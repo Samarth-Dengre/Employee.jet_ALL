@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/employee/addNewEmployee.css">
+<div class="container">
+    <form action="/employees/addNew" method="post">
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    <input type="text" id="form6Example1" class="form-control" name="name">
+                    <label class="form-label" for="form6Example1">Name</label>
+                </div>
+            </div>
+        </div>
+
+       <!-- Text input -->
+       <div class="form-outline mb-4">
+        <input type="text" id="form6Example4" class="form-control" name="empId">
+        <label class="form-label" for="form6Example4">Employee Id</label>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="form6Example5" class="form-control" name="email">
+            <label class="form-label" for="form6Example5">Email</label>
+        </div>
+        <!-- Text input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form6Example4" class="form-control" name="address">
+            <label class="form-label" for="form6Example4">Address</label>
+        </div>
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+            <input type="number" id="form6Example6" class="form-control" name="phnNo">
+            <label class="form-label" for="form6Example6">Phone</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="form6Example4" class="form-control" name="designation">
+            <label class="form-label" for="form6Example4">Designation</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="form6Example4" class="form-control" name="level">
+            <label class="form-label" for="form6Example4">Level</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="date" id="form6Example4" class="form-control" name="joinedOn">
+            <label class="form-label" for="form6Example4">Joined On</label>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row mb-4">
+            <div class="col">
+                <button type="submit" class="btn btn-primary btn-block mb-4">Add Member</button>
+            </div>
+            <div class="col">
+                <button type="" class="btn btn-primary btn-block mb-4"><a href="/employees"
+                        style="padding: 11px 238px; color: white">Cancel</a></button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>

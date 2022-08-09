@@ -1,0 +1,65 @@
+.container{
+    width: 84.2%!important;
+    overflow-y: scroll;
+}
+.employees-container{
+    margin: 28px;
+    width: 100%!important;
+    background-color: white;
+    height: 600px;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+.employees-container > h2{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.display-employee-cards-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll!important;
+}
+.employees-container::-webkit-scrollbar{
+    display: none;
+}
+.display-employee-cards-container::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    margin: 18px 8px;
+}
+
+.add-member-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none!important;
+    box-shadow: none!important;
+}
+.add-member-card > .card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 20px;
+    line-height: 1.5rem;
+   
+}
+
+.add-icon{
+    font-size: 7rem;
+    color: black;
+}
+
+
+#createNewCard{
+    margin-top: 5rem;
+
+}

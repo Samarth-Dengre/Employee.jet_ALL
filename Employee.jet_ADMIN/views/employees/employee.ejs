@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/employee/employee.css">
+<div class="container">
+
+        <div class="display-employee-cards-container">
+            <div id="createNewCard" class="card" style="width: 18rem; height:20rem;">
+                <a href="/employees/renderAddNew">
+                <div class="card-body" style="padding-bottom: 0;">
+                  <img src="/images/plus_icon2.png" style="width: 6rem;height:6rem;margin-top:3.2rem;margin-left:4.7rem;">
+                  <button class="btn btn-primary " style="margin-top:2.7rem ; margin-left:3.7rem;">Create New</button>
+                </div>
+              </a>
+                
+            </div>
+            <% for(let user of users){ %>
+                
+                    <div class="card" style="width: 18rem; height: fit-content;">
+                    
+                        <img class="card-img-top" style="width: 100px; border-radius: 50%; margin: auto"
+                            src="<%=user.avatar%>" alt="employee image">
+                            <h5 class="card-title mt-2" style="text-align: center;">
+                                <%=user.name%>
+                            </h5>
+                            <hr>
+                        <div class="card-body">
+                            
+                            <div class="myTeam-card-info">
+                                <p>
+                                <span class="font-weight-normal">Employee ID:</span>
+                                <span class="font-weight-light"><%=user.empId%></span>
+                                </p>
+                                <p>
+                                <span class="font-weight-normal">Email:</span>
+                                <span class="font-weight-light"><%=user.email%></span>
+                                </p>
+                                <p>
+                                <span class="font-weight-normal">Mobile No:</span>
+                                <span class="font-weight-light"><%=user.phnNo%></span>
+                                </p>
+                                 
+                                <p>
+                                    <span class="font-weight-normal">Designation:</span>
+                                    <span class="font-weight-light"><%=user.designation%></span>
+                                </p>    
+                               
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/employees/showDetails/<%=user._id%>" class="btn btn-info">More Details</a>
+                            <a href="/employees/remove/<%=user._id%>" style="margin: 3px;">
+                                <button type="button" class="btn btn-danger">Delete</button></a>
+                        </div>
+                        
+                    </div>
+                    
+                        <% } %>
+        </div>
+    
+</div>

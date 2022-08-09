@@ -1,0 +1,36 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+<script src="/js/viewAll.js"></script>
+<link href="/css/feedback/viewAll.css" rel="stylesheet" />
+
+<div class="container">
+  <div id="createNewFeedback" class="card" style="width: 17rem; height:17rem;">
+    <a href="/feedback/create">
+    <div class="card-body" style="padding-bottom: 0;">
+      <img src="/images/plus_icon2.png" style="width: 5.5rem;height:5.5rem;margin-top:1.9rem;margin-left:3.9rem;">
+      <!-- <p style="margin-top:1rem;margin-left:3.2rem;font-size: large;">Create New</p> -->
+      <button class="btn btn-primary">Create New</button>
+    </div>
+  </a>
+    
+</div>
+    <% for(let feedback of feedbacks) { %>
+          <div class="card" style="width: 17rem; height:22rem;">
+            <div class="card-header">
+                <p class="card-text mt-2"><small class="text-muted" >Total Responses: <%=feedback.isFilledBy.length%></small></p>
+              </div>
+        <div class="card-body" style="padding-bottom: 0;">
+          <h5 class="card-title"><%=feedback.name%></h5>
+          <p class="card-text"><%=feedback.description%></p>
+          <a href="/feedback/<%=feedback._id%>" class="btn btn-primary ">View Details</a>
+          
+        </div>
+        <div class="card-footer text-muted">
+            <p class="card-text mt-2"><small class="text-muted" >Created : <%=feedback.createdAt.toString().substring(0,16)%></small></p>
+            
+          </div>
+      </div>
+        <% } %>
+
+</div>
+
+

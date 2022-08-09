@@ -1,0 +1,31 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+
+<link rel="stylesheet" href="/css/project/viewAll.css">
+<div class="container">
+    <div class="display-project-cards-container">
+        <% for(let project of projects){ %>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title" style="margin-left:0rem;">
+                        <%= project.name %>
+                    </h4>
+                    <p class="card-text project-description">
+                        <%= project.description%>
+                    </p>
+                    <a href="projects/showDetails/<%=project._id%>" class="btn btn-primary mt-2 " style="margin-left:-0.5rem;">Show Details</a>
+
+                </div>
+                    <div class="card-footer text-muted">
+                        <p class="card-text "><small class="text-muted" ></small></p>
+                        <p class="card-text"><span>Member Count:&nbsp;</span>
+                            <%= project.team.length %>
+                        </p>
+                        <p class="card-text"><span>Created At:&nbsp;</span>
+                            <%= project.createdAt.toString().substring(0,15) %>
+                        </p>
+                      </div>
+                
+            </div>
+            <% } %>
+    </div>
+</div>

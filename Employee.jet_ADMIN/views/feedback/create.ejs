@@ -1,0 +1,66 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+<script src="/js/feedback/create.js"></script>
+<link href="/css/feedback/create.css" rel="stylesheet" />
+
+<div class="container">
+    <form class="create-new-form mt-5 mb-5" action="/feedback/create" method="POST">
+        <div class="mb-3">
+            <label for="title" class="form-label fw-bold fs-4">Title</label>
+            <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelp">
+            <div id="titleHelp" class="form-text">Give a short title to your feedback form</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label fw-bold fs-5">Description</label>
+            <input type="text" class="form-control" name="description" id="description" aria-describedby="descriptionHelp">
+            <div id="descriptionHelp" class="form-text">Give a brief description to what your feedback does</div>
+        </div>
+<br>
+<label for="isAnonymous" class="form-label fw-bold fs-5">Is this form Anonymous?</label>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="isAnonymous" name="isAnonymous">
+            <label class="form-text " for="isAnonymous">Tick this if you want this feedback's responses to be
+                anonymous</label>
+        </div>
+        <br>
+        <label for="questions" class="form-label fw-bold fs-5">Questions</label>
+        <button id="addNewQuestionBtn" type="submit" class="btn btn-primary p-2 ml-2 mb-2">Add New Question</button>
+        <br>
+        <div class="questions">
+            <div class="card mt-4" id="q1">
+                <div class="card-header">
+                    Question 1
+                </div>
+                <div class="card-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="q1-question" name="questions[]" placeholder="-">
+                        <label for="q1-question">Question</label>
+                    </div>
+                    <select id="q1-type" name="types[]" class="form-select" aria-label="Default select example">
+                        <option selected>Type </option>
+                        <option value="rating">Rating</option>
+                        <option value="binary">Binary( Y/N)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card mt-4" id="q2">
+                <div class="card-header">
+                    Question 2
+                </div>
+                <div class="card-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="q2-question" name="questions[]" placeholder="-">
+                        <label for="q2-question">Question</label>
+                    </div>
+                    <select id="q2-type" name="types[]" class="form-select" aria-label="Default select example">
+                        <option selected>Type </option>
+                        <option value="rating">Rating</option>
+                        <option value="binary">Binary( Y/N)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

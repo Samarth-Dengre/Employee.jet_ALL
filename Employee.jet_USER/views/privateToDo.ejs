@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/css/privateToDo.css">
+<script src="/js/privateToDo.js"></script>
+<div id="showTaskPrivate" class="showTasksContainer">
+  <% if(tasks){ %>
+    <% for(let i=0; i < tasks.length; i++) { %>
+      <form action="/users/update-private-todo-list/<%=tasks[i]._id%>" method="post" class="form-task-<%=tasks[i]._id%>">
+        <ul class="list-group list-group-horizontal rounded-0 bg-transparent">
+          <li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent hide-on-edit">
+            <div class="form-check">
+              <input class="form-check-input me-0 hide-on-edit pvt-task-complete" type="checkbox" value="" id="check-<%=tasks[i]._id%>" aria-label="..." <%= (tasks[i].completedStatus)?'checked':'' %>/>
+            </div>
+          </li>
+          <li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent"
+            style="width: 65%; overflow-wrap: anywhere;">
+            <textarea id="task-<%=tasks[i]._id%>" type="text" class="lead fw-normal mb-0 hide-on-edit private-todo-textarea" disabled ><%= tasks[i].task %></textarea>
+          </li>
+          <li class="list-group-item ps-3 pe-10 py-1.5 rounded-0 border-0 bg-transparent" style="width: 19%;">
+            <div class="d-flex flex-row justify-content-end mb-1">
+              <a id="edit-<%=tasks[i]._id %>" href="#" class="text-info private-todo-edit hide-on-edit" data-mdb-toggle="tooltip"
+                title="Edit task"><i class="fas fa-pencil-alt me-3"></i></a>
+              <a href="/users/delete-private-todo-list-task/<%=tasks[i]._id%>" class="text-danger hide-on-edit" data-mdb-toggle="tooltip"
+                title="Delete task"><i class="fas fa-trash-alt"></i></a>
+            </div>
+            <div class="text-end text-muted">
+              <a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="DEADLINE"
+                style="text-align: left!important;">
+                <p class="small mb-0 hide-on-edit"><i class="fas fa-info-circle me-2"></i>
+                  <%=tasks[i].deadline.toString().substring(0,15)%>
+                </p>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <hr>
+      </form>
+      <% } %>
+        <% } %>
+
+</div>
+
+<div class="private-todo-container">
+  <form action="/users/add-task-to-privateList" method="post" class="new-task-form">
+    <div id="desc">
+      <label for="description">DESCRIPTION</label>
+      <input class="decor" type="text" name="task" required placeholder="What do you need to do?">
+    </div>
+
+    <div id="date">
+      <label for="date">DEADLINE</label>
+      <input class="decor" type="date" name="deadline" id="dueDate" required>
+    </div>
+
+    <div id="buttons">
+      <button id="add" type="submit">
+        <i class="fas fa-plus"></i>
+        ADD TASK
+      </button>
+    </div>
+  </form>
+</div>

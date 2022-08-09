@@ -1,0 +1,72 @@
+<script src="/js/feedback/show.js"></script>
+<link href="/css/feedback/show.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/animations.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+
+<div class="container">
+<div class="showDetails mb-5">
+    <% for(let i=0;i<feedback.questions.length;i++){%>
+        <% let question=feedback.questions[i];%>
+    <div class="card">
+        <div class="card-header">Question-<%=i+1%>
+        </div>
+        <div class="card-body">
+            
+            <h5 class="card-title"><%=question.question%></h5>
+                <% if(question.type === 'rating'){%>
+                    <% if (averages[i]!=0 ){%>   
+                        <p class="card-text">Average: <%=averages[i].toString().substring(0,3)%>/5</p>
+                        <%}else{%>
+            <p class="card-text">Average: No Responses</p>
+            <% } %>
+            <%} else if(question.type=== 'binary'){%>
+                <% if (averages[i]!=0 ){%>   
+                    <p class="card-text"><%=averages[i].toString().substring(0,4)%>% voted 'YES'</p>
+                    <%}else if(feedback.questions[i].responses.length===0){%>
+        <p class="card-text">No Responses</p>
+        <% }else { %>
+            <p class="card-text">0% voted 'YES'</p>
+            <% } %>
+                <%}%>
+                <div class="show-details-buttons">
+                    <a href="#" id="showResponses-<%=question._id%>" class="btn btn-primary btnShowResponses">Show Responses</a>
+                </div>
+        </div>
+        <ul id="responses-<%=question._id%>" class="list-group responses">
+            <% for(let response of question.responses){%>
+                <li class="list-group-item">
+                    <% if(question.type === 'rating'){%>
+                    <%=response.byEmpObjId.name%>
+                    <%} else if(question.type=== 'binary'){%>
+                    <%=response.byEmpObjId.name%>-<%=response.response%>
+                    <%}%>
+                    <% if(question.type=== 'rating') {%>
+                    <p class="starability-result" data-rating="<%=response.response%>">
+                        Rated: <%=response.response%> stars
+                    </p>
+                    <%}%>
+                </li>
+                <%} %>
+            <!-- <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li> -->
+          </ul>
+    </div>
+    
+    <!-- <div class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div> -->
+    
+    <% } %>
+    <button id="generateDetailedReport" class="btn btn-success">Generate Detailed Report</button>
+</div>
+</div>

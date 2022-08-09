@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.myTeam-container {
+    height: 100%;
+    width: 84.2%;
+    background-color: wheat;
+    position: absolute;
+    scroll-behavior: smooth;
+    top: 70px;
+    overflow: scroll;
+    padding: 0;
+
+}
+.myTeam-container::-webkit-scrollbar{
+    display: none;
+}
+
+.members-of-my-team{
+    display: flex;
+}
+
+.myTeam-card-container {
+    height: 100%;
+    width: 100%;
+    background-color: wheat;
+    /* position: absolute; */
+    scroll-behavior: smooth;
+    /* top: 70px; */
+    overflow: scroll;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+
+}
+.myTeam-card-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+.card{
+    margin: 24px 15.8px;
+    padding: 2px;
+    text-align: center;
+    height:fit-content!important;
+}
+
+.card-img-top{
+    width: 60%;
+    /* height: 50%; */ 
+    margin: auto;
+    border-radius: 50%;
+}
+
+.myTeam-card-info{
+    line-height: 8px;
+}
+
+.add-team-members-header, .add-member-to-myTeam-form {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+  }
+  
+  .add-member-to-myTeam-form {
+    padding: 50px;
+    display: none;
+  }
+
+  #add-new-icon{
+    font-size: 70;
+    height: 120px!important;
+  }
+
+  #supervisorBadge{
+    position: absolute; 
+    top:-1.1rem;
+    left:6rem;
+    font-size: 1rem;
+    border:1px solid white;
+  }

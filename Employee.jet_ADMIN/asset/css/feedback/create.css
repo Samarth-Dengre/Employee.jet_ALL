@@ -1,0 +1,26 @@
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    display: block !important;
+    overflow-y: scroll!important;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    width: 84.2%!important;
+}
+
+.create-new-form{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin-left: 10rem;
+    height: fit-content;
+}
+
+.form-control{
+    letter-spacing: normal;
+}
+
