@@ -1,5 +1,5 @@
 *This project is still in development phase. Kindly open any issues you face in the repo's `Issue` tab                                                       
-**This project was developed by Samarth Dengre and - [Vaibhav Jaiswal](https://github.com/thecurious1-sudo) for the event 'Code with Globalshala 3.0'
+**This project was developed by Samarth Dengre and - [Vaibhav Jaiswal](https://github.com/thecurious1-sudo) as a prototype for the event 'Code with Globalshala 3.0' ***and is not fully functional.
 
 # Empolyee.Jet
 
