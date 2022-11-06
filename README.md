@@ -1,7 +1,6 @@
-*This project is still in development phase. Kindly open any issues you face in the repo's `Issue` tab                                                       
 **This project was developed by Samarth Dengre and - [Vaibhav Jaiswal](https://github.com/thecurious1-sudo) as a prototype for the event 'Code with Globalshala 3.0' and is not fully functional yet.
 
-# Empolyee.Jet
+# Employee.Jet
 
 This project is an Employee Engagement Platform. With the help of this project, A company can manage the workload of an employee, give tasks to the employee based on the skillset, take feedback about the project they are working on and about the team members, will improve the workplace experience by boosting employee morale, productivity, and company alignment
 
