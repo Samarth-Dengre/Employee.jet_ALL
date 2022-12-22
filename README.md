@@ -1,4 +1,4 @@
-**This project was developed by Samarth Dengre and - [Vaibhav Jaiswal](https://github.com/thecurious1-sudo) as a prototype for the event 'Code with Globalshala 3.0' and is not fully functional yet.
+**This project was developed by Samarth Dengre and - [Vaibhav Jaiswal](https://github.com/thecurious1-sudo) as a prototype for the event 'Code with Globalshala 3.0'.
 
 # Employee.Jet
 
